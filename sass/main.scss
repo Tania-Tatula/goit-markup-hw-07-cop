@@ -1,7 +1,597 @@
-$primari-text-color: #757575;
-$title-text-color: #212121;
-$accent-color: #2196F3;
-$title-page-color: #FFFFFF;
-$bg-color: #E5E5E5;
-$bg-dark-color: #2F303A;
-$bg-color-blu: #F5F4FA;
+@import "./utils/variables";
+@import "./utils/mixin";
+@import "./base/common";
+@import "./components/links";
+@import "./layouts/header";
+@import "./components/logo";
+@import "./layouts/navigation";
+@import "./components/contacts";
+@import "./layouts/hero";
+@import "./components/modal-icon";
+
+
+
+ 
+
+ /* стилі для кнопок */
+ .btn {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 4px;
+ }
+
+  .btn-studia {
+    position: relative;
+    display: flex;
+    margin: auto;
+    font-weight: 700;
+    line-height:1.87;
+    align-items: center;
+
+    min-width: 200px;
+    padding: 10px 32px;
+    
+    letter-spacing: 0.06em;
+    color: $title-page-color;
+    background-color: $accent-color;
+    border: none;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .btn-studia:hover,
+ .btn-studia:focus {
+    background-color: $title-page-color;
+    color: $accent-color;
+ }
+
+ .btn-studia:hover .footer-icon-svg,
+ .btn-studia:focus .footer-icon-svg {
+     fill: $accent-color;
+ }
+
+ .footer-btn-svg {
+    position: absolute;
+    left: 148px;
+    top: 13px;
+    width: 24px;
+    height: 24px;
+
+ }
+
+ .footer-icon-svg {
+    width: 24px;
+    height: 24px;
+
+    fill: $title-page-color;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .btn-portfolio {
+    font-weight: 500;
+    line-height:1.62;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+    background-color:#F5F4FA;
+    border: none;
+    padding: 6px 22px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+.btn-portfolio:hover,
+.btn-portfolio:focus {
+    background-color: $accent-color;
+    color: $title-page-color;
+}
+
+
+
+ /* стилі для лого*/
+ .logo {
+    font-family: $font-raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
+}
+
+
+
+
+.logo-color-footer {
+    color: $title-page-color;
+}
+
+
+/* стилі для всіх заголовків  */
+.section-title {
+    color: $title-text-color;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.66;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+
+
+.section-title-mini {
+    font-size: 16px;
+    line-height: 1.187;
+    font-weight: 500;
+    text-align: center;
+    color: $title-text-color;
+    
+}
+
+.title-caps-1 {
+    color: $title-text-color;
+
+    margin-bottom: 10px;
+}
+
+.title-caps-2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+
+    color: $title-page-color;
+    text-align: center;
+    
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    background-color:rgba(47, 48, 58, 0.8);
+      
+}
+
+.section-title-caps {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;  
+}
+
+.social-network-title {
+    color: $title-page-color;
+    margin-bottom: 20px;
+}
+
+
+ 
+
+ .title-progect {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $title-text-color;
+
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 20px;
+    z-index: 99;
+
+}
+
+/* стилі для тексту */
+.paragraf {
+    font-size: 16px;
+    line-height: 1.187;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.paragraf-ptf {
+    font-size: 16px;
+    line-height: 1.87;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 20px;
+
+    z-index: 99;
+}
+
+.footer-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    margin-top: 0;
+    margin-bottom: 9px;
+    bottom: 0;
+    }
+
+.address-color {
+    color: $title-page-color;
+}
+
+.mt-color {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+address {
+    font-style: normal;
+}
+
+
+/* стилі для фону */
+
+.bg-color-dark-footer{
+    background-color: $bg-dark-color; 
+}
+
+.bg-color-dark {
+    min-height: 600px;
+}
+
+.footer-container {
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+
+
+.bg-color-blu {
+    background: $bg-color-blu;
+    padding-top: 94px;
+
+}
+
+
+
+
+
+.subtext {
+   position: absolute;
+   left: 0;
+   top: 0;
+   transform: translateY(294px);
+
+
+    height: 294px;
+    width: 100%;
+    padding: 63px 24px;
+   
+    font-size: 18px;
+    line-height: 1.55;
+    color: $title-page-color;
+
+    background-color: rgba(33, 150, 243, 0.9);
+        
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   }
+   
+   .tumb {
+       position: relative;
+       overflow: hidden;
+   }
+
+.prt-box:hover .subtext {
+    transform: translateY(0);    
+}
+
+
+
+
+
+
+/* геометрія сторінки */
+
+
+
+
+
+
+
+.nav {margin-bottom: 9px;}
+
+.section {
+    padding-bottom: 94px;
+}
+ /* флексбокси у решти контейнерыв */
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+     
+}
+
+.content-box {
+    flex-basis: 270px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.content-box:nth-child(4n){
+    margin-right: 0;
+}
+
+.content-box:nth-last-child(-n + 4) {
+    margin-bottom: 0;
+  }
+
+
+.benefits {
+    padding-top: 85px;
+}
+
+.flexsvg {
+    width: 170px;
+    height: 90px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+  
+}
+
+.flexsvg:not(:last-child) {
+    margin-right: 30px;
+}
+
+.flexsvg-linc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 170px;
+    background-color: inherit;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.client-svg {
+    fill: #AFB1B8;
+}
+
+.flexsvg-linc:hover .client-svg,
+.flexsvg-linc:focus .client-svg {
+   fill: $accent-color;
+}
+
+
+/* стилы для блокыв з картинками */
+
+.fleximg {
+    flex-basis: 370px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.position-bloc{
+    position: relative;
+}
+
+
+.fleximg:nth-child(3n){
+    margin-right: 0;
+}
+
+.fleximg:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+
+.prt-box {
+    border: 1px solid rgba(238,238,238,1);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prt-box:hover,
+.prt-box:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
+.command{
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+/* приховує елементи */
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
+  
+  .workers-text {
+      margin-top: 30px;
+      margin-bottom: 10px;
+  }
+
+  /* флекси портфоліо */
+.menu-portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.menu-portfolio-item:not(:last-child) {
+    padding-right: 9px;
+}
+
+.portfolio-container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: $title-page-color;
+}
+
+/*додаэмо svg */
+
+
+
+.bgimage::before {
+    display: block;
+    height: 120px;
+    width: 270px;
+    margin-bottom: 30px;
+    content: "";
+    background-color: $bg-color-blu;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+
+}
+
+.image-1::before {
+background-image: url(../images/antenna-1.svg);
+}
+
+.image-2::before {
+    background-image: url(../images/clock-1.svg);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.image-3::before {
+    background-image: url(../images/diagram-1.svg);
+}
+
+.image-4::before {
+    background-image: url(../images/astronaut.svg);
+}
+
+
+
+/* соціфльнф мережі оформлення */
+.social-icons {
+    display: flex;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-bottom: 30px;
+    margin-top: 16px;
+}
+
+
+
+.social-icons-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-icons-linc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    background-color: inherit;
+    border-radius: 50%;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon-svg {
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icons-linc:hover .social-icon-svg,
+.social-icons-linc:focus .social-icon-svg {
+   fill: $title-page-color;
+}
+
+.social-icons-linc:hover,
+.social-icons-linc:focus {
+    background-color: $accent-color;
+}
+
+.footer-bloc {
+    min-width: 206px;
+    margin-right: 70px;
+}
+
+
+.bloc {
+    display: flex;
+    justify-content:start;
+}
+
+.addres-bloc{
+    min-width: 231px;
+        
+}
+
+.footer-social {
+    width: 170px;
+    height: 90px;
+     
+}
+
+.footer-svg-linc {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-svg-icon {
+     width: 20px;
+     height: 20px;
+     fill: $title-page-color;
+}
+
+.footer-form {
+    min-width: 570px;
+    margin-left: 23px;
+}
+
+
+.footer-email-form input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: inherit;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    padding: 15px 16px;
+    margin-right: 12px;
+}
+.footer-email {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-email-form input {
+    color: $title-page-color;
+}
+
+.footer-email-form input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* овормлення форм */
+/* модальне вікно */
+
+
+
+
+
+
+
+
